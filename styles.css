@@ -1,0 +1,215 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Poppins-ExtraBoldItalic;
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: Poppins-ExtraBoldItalic;
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: Poppins-Italic;
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+}
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+
+body{
+    min-height: calc(100vh);    
+    vertical-align: middle;
+    margin: 0;
+    margin-inline: 15px;
+
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    background-color: var(--Off-white);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+section{
+    min-height: calc(90vh);    
+    display: flex;
+    flex-direction: row;        
+    align-items: center;
+    justify-content: center;
+    height: var(90vh);        
+}
+.card{
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px 15px 140px 15px;
+    box-shadow: 0px 0px 10px 0px #888;
+    padding: 20px;
+    background-color: var(--White);
+}
+
+.inputs {
+    flex: 1;
+    display: flex;
+    flex-direction: row;    
+}
+
+.input-row{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 30%;        
+}
+.input-col{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;        
+    position: relative;
+}
+
+input{
+    height: 47px;
+    font-size: 100%;    
+    padding-inline-start: 10px;
+    font-family: "Poppins-Bold";
+    border-radius: 5px; 
+    border: 1px solid var(--Light-grey);
+}
+.tittle{
+    font-family: "Poppins-Bold";
+    color: var(--Smokey-grey);
+    font-size: x-small;
+    margin-bottom: 5px;
+}
+label{
+    font-family: "Poppins-Italic";
+}
+.results {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.results div {
+    flex: 1;
+    display: flex;
+}
+
+.results p {
+    font-size: 48px;
+    margin: 0px;
+    font-family: "Poppins-ExtraBoldItalic";
+    white-space: pre;    
+    transition: all 1s;    
+}
+
+
+.results p:first-child {
+    color: var(--Purple);
+    word-spacing: 0%;
+}
+
+.separator div {
+    background-color: var(--Purple);
+    border-radius: 100%;
+    position: absolute;
+    padding: 10px;
+    left: 95%;
+    top: 0px;
+    width: 40px;    
+    height: 40px;
+}
+.separator div img {    
+    height: 30px;    
+    margin: 5px;
+}
+.separator{
+    position: relative;
+    height: 50px;    
+    max-width: 90%;
+}
+.line{
+    margin-top: 30px;
+    left: 0;
+    color: var(--Light-grey);
+    opacity: 0.2;
+}
+
+.error{
+    color: var(--Light-red);
+    font-family: "Poppins-Bold";
+    font-weight: bold;    
+    font-size: x-small;
+    margin-bottom: 5px;
+}
+
+input:focus::after{
+    position: absolute;
+    top: 10px;
+    height: 60px;    
+    width: 100%;    
+}
+
+.attribution { font-size: 11px; text-align: center; font-family: "Poppins-Regular";}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.animacion {
+    animation-name: my-animation;
+    animation-duration: 0.3s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@keyframes my-animation {
+    from {
+        transform: rotate3d(0,0,1,180deg);
+        opacity: 0.5;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+.animacion-imagen {
+    animation-name: my-rotation;
+    animation-duration: 0.3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 3s;
+}
+@keyframes my-rotation {
+    from {
+        transform: rotate3d(0,0,1,360deg);        
+    }
+    to {
+        
+    }
+}
+
+@media(max-width:375px){
+    .separator{
+        height: 80px;
+        margin-top: 20px;
+    }
+    .separator div {        
+        left: 40%;
+    }
+}
+@media(max-width: 340px) {
+    .results p{
+        font-size: 32px;
+    }
+}
