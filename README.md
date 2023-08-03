@@ -41,7 +41,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Age-calculator](https://matiasrma.github.io/Age-calculator/)
+- Live Site URL: [Age-calculator](https://matiasrma.github.io/Age-calculator-app/)
 
 ## My process
 
