@@ -46,15 +46,16 @@ function updateDate(){
 
         if (date > today){
             years -= 1;
-            months < 0 ? months+= 12: months;
-            months === 0 && days < 0 ? months+= 11 : months;
+            months+= 12;
         }
+
+        days < 0 ? months -= 1 : months; 
 
         date.setMonth(today.getMonth()-1);
         let diasMS = today - date;
         diasMS = diasMS / (1000 *60 *60 *24 );
 
-        days < 0 ? days = Math.round(diasMS) : days;
+        days < 0 ? days = Math.round(diasMS) -1 : days;
         
         daysResult.innerHTML = days;
         monthResult.innerHTML = months;
